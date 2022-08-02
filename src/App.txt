@@ -1,0 +1,143 @@
+import DatosPersonales from './components/pages/DatosPersonales'
+import './index.scss'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Horario from './components/pages/Horario'
+import { menuDefault } from './consts/menu'
+import Navigation from './components/UI/molecules/navigation/Navigation'
+import Header from './components/UI/organisms/header/Header'
+import Footer from './components/UI/organisms/footer/Footer'
+import Index from './components/pages/Index'
+import SolicitudMarcacion from './components/pages/SolicitudMarcacion'
+import SesionesAbiertas from './components/pages/SesionesAbiertas'
+import SesionesAnteriores from './components/pages/SesionesAnteriores'
+import Delegado from './components/pages/Delegado'
+import Recuperar from './components/pages/Recuperar'
+import IngresoNotas from './components/pages/IngresoNotas'
+import EvaluacionComp from './components/pages/EvaluacionComp'
+import EnviarNotas from './components/pages/EnviarNotas'
+import LogsCreacion from './components/pages/LogsCreacion'
+import RegistroAsistencia from './components/pages/RegistroAsistencia'
+import VerAsistencias from './components/pages/VerAsistencias'
+import SeleccionarSesion from './components/pages/SeleccionarSesion'
+
+function App() {
+  const imagePros = {
+    src: 'https://upn-repositorio-public.s3.amazonaws.com/logos/png/logo-upn-sin-fondo.png',
+    alt: 'test',
+    classname: 'logoHeader',
+  }
+
+  const welcomeProps = {
+    labelWelcome: {
+      children: 'Bienvenido Profesor(a): VILLAR',
+      classname: 'badge bg-light text-dark mb-2',
+    },
+    anchorDatPer: {
+      href: '/datos-personales',
+      children: 'Datos Personales',
+      classname: 'badge bg-info text-white text-decoration-none me-1',
+    },
+    anchorLogout: {
+      href: '#',
+      children: 'Salir del Sistema',
+      classname: 'badge bg-danger text-white text-decoration-none',
+    },
+    classname: 'text-center text-md-end',
+  }
+
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <Header
+          imagePros={imagePros}
+          welcomeProps={welcomeProps}
+        />
+
+        <Navigation menu={menuDefault} />
+        <Router>
+          <Routes>
+            <Route
+              path="/datos-personales"
+              element={<DatosPersonales />}
+            />
+
+            <Route
+              path="/horario"
+              element={<Horario />}
+            />
+
+            <Route
+              path="/solicitud-de-marcacion"
+              element={<SolicitudMarcacion />}
+            />
+
+            <Route
+              path="/sesiones-abiertas"
+              element={<SesionesAbiertas />}
+            />
+
+            <Route
+              path="/sesiones-anteriores"
+              element={<SesionesAnteriores />}
+            />
+
+            <Route
+              path="/recuperar-adelantar"
+              element={<Recuperar />}
+            />
+
+            <Route
+              path="/registrar-delegado"
+              element={<Delegado />}
+            />
+
+            <Route
+              path="/ingreso-de-notas"
+              element={<IngresoNotas />}
+            />
+
+            <Route
+              path="/evaluacion-de-competencias"
+              element={<EvaluacionComp />}
+            />
+
+            <Route
+              path="/enviar-notas"
+              element={<EnviarNotas />}
+            />
+
+            <Route
+              path="/logs-creacion"
+              element={<LogsCreacion />}
+            />
+
+            <Route
+              path="/registro-asistencia"
+              element={<RegistroAsistencia />}
+            />
+
+            <Route
+              path="/ver-asistencia"
+              element={<VerAsistencias />}
+            />
+
+            <Route
+              path="/seleccionar-sesion"
+              element={<SeleccionarSesion />}
+            />
+
+            <Route
+              path="/"
+              element={<Index />}
+            />
+          </Routes>
+        </Router>
+        <Footer />
+      </div>
+    </Provider>
+  )
+}
+
+export default App

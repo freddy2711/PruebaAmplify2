@@ -1,0 +1,107 @@
+{
+  "name": "web-portal-docente",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/alertify": "^0.3.31",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.9",
+    "@types/react-bootstrap": "^0.32.29",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-redux": "^7.1.24",
+    "alertifyjs": "^1.13.1",
+    "autoprefixer": "10.4.5",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "classnames": "^2.3.1",
+    "css-loader": "^6.7.1",
+    "excel-parser": "^0.2.2",
+    "jarn": "0.0.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.25",
+    "local-storage": "^2.0.0",
+    "mdbreact": "^5.2.0",
+    "moment": "^2.29.4",
+    "next": "^12.1.6",
+    "node-xlsx": "^0.21.0",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.4.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "^18.1.0",
+    "react-export-table-to-excel": "^1.0.3",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.52.1",
+    "style-loader": "^3.3.1",
+    "sweetalert2": "^11.4.23",
+    "typescript": "^4.7.2",
+    "web-vitals": "^2.1.4"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm install && next build",
+    "start": "next start",
+    "eject": "react-scripts eject",
+    "format": "prettier --write .",
+    "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-interactions": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
+    "@storybook/builder-webpack5": "^6.5.6",
+    "@storybook/manager-webpack5": "^6.5.6",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.6",
+    "@storybook/testing-library": "^0.0.11",
+    "@types/flat": "^5.0.2",
+    "@types/react-csv": "^1.1.3",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-storybook": "^0.5.12",
+    "flat": "^5.0.2",
+    "prettier": "^2.6.2",
+    "redux-devtools-extension": "^2.13.9",
+    "storybook-css-modules": "^1.0.7",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}

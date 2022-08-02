@@ -1,0 +1,163 @@
+/* Define colors */
+$lucuma: #fdba30 !default;
+$black: #000 !default;
+$purple: #9500ff !default;
+$magenta: #ff00da !default;
+$cyan: #00b9ff !default;
+$orange: #ff7a3e !default;
+$yellow: #fdba30 !default;
+
+$colors: (
+  "lucuma": $lucuma,
+  "magenta": $magenta,
+);
+
+$primary: $lucuma !default;
+$secondary: $black !default;
+$success: $purple !default;
+$danger: $magenta !default;
+$warning: $orange !default;
+$info: $cyan !default;
+
+/* Define fonts */
+@font-face {
+  font-family: "Sharp Grotesk Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.upn.edu.pe/fonts/SharpGrotesk/SharpGrotesk-Bold15.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Semi Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.upn.edu.pe/fonts/SharpGrotesk/SharpGrotesk-SemiBold15.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.upn.edu.pe/fonts/SharpGrotesk/SharpGrotesk-Book15.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Telegraf Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.upn.edu.pe/fonts/Telegraf/Telegraf-Regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Telegraf Ultra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://cdn.upn.edu.pe/fonts/Telegraf/Telegraf-UltraBold.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* Las tipografías SharpGrotesk siempre se usarán en mayúsculas. */
+/* Las tipografías Telegraf siempre se usarán en minúsculas. */
+/* Los elementos h1,h2,h3,h4,h5 están usando Sharp Grotesk Bold */
+
+$font-family-sans-serif: "Telegraf Regular", Sans-serif !default;
+$headings-font-family: "Sharp Grotesk Bold", Sans-serif !default;
+$headings-font-weight: 400 !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-transform: uppercase;
+}
+
+@import '~bootstrap/scss/bootstrap';
+
+/* Then add additional custom code here */
+
+button.btn {
+  font-family: "Telegraf Ultra Bold", sans-serif;
+}
+
+//
+$accent-color: $primary !default;
+
+.form-check-input {
+  accent-color: $accent-color;
+}
+
+.form-control-range {
+  accent-color: $accent-color;
+}
+
+.table-responsive thead{
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* BEGIN MODAL ALERTAS */
+.alertify .ajs-dialog,
+.ajs-header,
+.ajs-footer {
+  border-radius: 0px !important;
+  border: 0 !important;
+}
+.ajs-header {
+  background: #ffc107 !important;
+}
+.ajs-button {
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+.ajs-ok{  
+  color: #212529 !important;
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  float: right ;
+}
+.ajs-ok:hover{  
+  color: #464646 !important;
+  background-color: #eeba1f !important;
+  border-color: #ffc107 !important;
+}
+.ajs-cancel{  
+  color: #fff !important;
+  background-color: #212529 !important;
+  border-color: #ffc107 !important;
+}
+.ajs-cancel:hover{    
+  color: #fff !important;
+  background-color: #464646 !important;
+  border-color: #ffc107 !important;
+}
+.ajs-footer{
+  height: 70px !important;
+}
+.ajs-button:hover {
+  opacity: 0.8;
+}
+
+.ajs-commands {
+  position: absolute;
+  right: 4px;
+  margin: -25px 0px 0 0 !important;
+  z-index: 2;
+}
+/* END MODAL ALERTAS */
